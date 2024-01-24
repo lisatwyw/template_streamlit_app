@@ -36,18 +36,7 @@ import folium, geopy; from folium import plugins; import geopandas as gpd
 import streamlit.components.v1 as components
 import streamlit as st
 from streamlit_folium import st_folium, folium_static
-
-
-DEBUG=0
-NDAYS = 30 #365*2
-
-path_data = Path( '/mount/src/pale-blue-dot/data/' )
-path_root = Path( '/mount/src/pale-blue-dot/rcamps/' )
-path_pages= Path( '/mount/src/pale-blue-dot/rcamps/pages/' )
-w_gdf = geopandas.read_file( Path(path_data, 'ne_110m_admin_0_countries.shp') )
-   
-
-
+  
 def convert_df(df):
    return df.to_csv(index=False).encode('utf-8')
 
@@ -124,7 +113,5 @@ def filter_dataframe(df, name_of_chkbox,  ) -> pd.DataFrame:
 def print_footer():
     st.markdown('''
     Related materials:
-    https://refugees.streamlit.app/ |
-    http://www.mcrg.ac.in/cata.htm |
-    https://resourcewatch.org/data/explore
+    https://www.ubc.ca | https://www.sfu.ca
     ''')
