@@ -10,7 +10,12 @@ sys.path.append(parent_dir)
 gparent_dir = os.path.dirname( parent_dir )
 sys.path.append(gparent_dir)
 
+import utils
+
 from importlib import reload
 reload( utils )
-import utils
+
+print( 'Granny of Home.py: ' + gparent_dir )
+print( 'Parent of Home.py: ' + parent_dir )
+
 
