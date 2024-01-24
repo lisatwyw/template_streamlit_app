@@ -36,7 +36,14 @@ import folium, geopy; from folium import plugins; import geopandas as gpd
 import streamlit.components.v1 as components
 import streamlit as st
 from streamlit_folium import st_folium, folium_static
-  
+
+
+# Get the parent directory
+path_root = Path( os.path.dirname(os.path.realpath(__file__)) )
+print( 'Root path: ' + path_root )
+
+
+
 def convert_df(df):
    return df.to_csv(index=False).encode('utf-8')
 
